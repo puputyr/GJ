@@ -1,0 +1,138 @@
+[gd_scene load_steps=10 format=3 uid="uid://cwmhda70cixil"]
+
+[ext_resource type="Texture2D" uid="uid://ba1b1xci7y061" path="res://asset/background/box.png" id="1_37fak"]
+[ext_resource type="Texture2D" uid="uid://ct4rwggxyedrp" path="res://asset/background/win lose/14.png" id="2_41ic5"]
+[ext_resource type="Texture2D" uid="uid://b1y6kiobrcwa7" path="res://asset/botton/6.png" id="3_rcay2"]
+[ext_resource type="Texture2D" uid="uid://cq8c3xrm4rvyj" path="res://asset/botton/hover/6.png" id="4_h6k3s"]
+[ext_resource type="Texture2D" uid="uid://bkeu0vybe3cui" path="res://asset/botton/3.png" id="5_8pjfg"]
+[ext_resource type="Texture2D" uid="uid://1ibuhsy84osf" path="res://asset/botton/hover/3.png" id="6_w5eqv"]
+
+[sub_resource type="Animation" id="Animation_4f47i"]
+resource_name = "lose"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lose:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.1, 0.099), Vector2(0.474167, 0.468889)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/home:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.1, 0.092), Vector2(0.34968, 0.322684)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control2/retry:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.1, 0.092), Vector2(0.34968, 0.322684)]
+}
+
+[sub_resource type="Animation" id="Animation_4abmk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lose:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.474167, 0.468889)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/home:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.34968, 0.322684)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control2/retry:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.34968, 0.322684)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_luafu"]
+_data = {
+"RESET": SubResource("Animation_4abmk"),
+"lose": SubResource("Animation_4f47i")
+}
+
+[node name="game over" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_luafu")
+}
+autoplay = "lose"
+
+[node name="box" type="Sprite2D" parent="."]
+position = Vector2(959.167, 535.5)
+scale = Vector2(0.477417, 0.484)
+texture = ExtResource("1_37fak")
+
+[node name="lose" type="Sprite2D" parent="."]
+position = Vector2(958, 521)
+scale = Vector2(0.474167, 0.468889)
+texture = ExtResource("2_41ic5")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 772.0
+offset_top = 665.0
+offset_right = 940.0
+offset_bottom = 747.0
+
+[node name="home" type="TouchScreenButton" parent="Control"]
+position = Vector2(-4.99994, -8.99988)
+scale = Vector2(0.34968, 0.322684)
+texture_normal = ExtResource("3_rcay2")
+texture_pressed = ExtResource("4_h6k3s")
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 982.0
+offset_top = 669.0
+offset_right = 1150.0
+offset_bottom = 751.0
+
+[node name="retry" type="TouchScreenButton" parent="Control2"]
+position = Vector2(2, -15)
+scale = Vector2(0.34968, 0.322684)
+texture_normal = ExtResource("5_8pjfg")
+texture_pressed = ExtResource("6_w5eqv")

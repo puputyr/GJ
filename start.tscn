@@ -1,0 +1,315 @@
+[gd_scene load_steps=13 format=3 uid="uid://cv2yo8w3y46su"]
+
+[ext_resource type="Script" path="res://start.gd" id="1_deljy"]
+[ext_resource type="Texture2D" uid="uid://bevclerasu81t" path="res://asset/background/9.png" id="1_yiakb"]
+[ext_resource type="Texture2D" uid="uid://bbino4hrxb651" path="res://asset/background/5.png" id="2_l5dsm"]
+[ext_resource type="Texture2D" uid="uid://bwhmt4hosggs7" path="res://asset/background/6.png" id="3_kdu3a"]
+[ext_resource type="Texture2D" uid="uid://blhgvw4d4n1il" path="res://asset/botton/1.png" id="4_vsewb"]
+[ext_resource type="Texture2D" uid="uid://bgq54kcnoj68b" path="res://asset/botton/hover/1.png" id="5_i46b3"]
+[ext_resource type="Texture2D" uid="uid://dkucawmc5njfo" path="res://asset/background/Pixel Art Illustration Zoom Background/9.png" id="5_neu72"]
+[ext_resource type="Texture2D" uid="uid://b8cjvmjmo6017" path="res://asset/background/Pixel Art Illustration Zoom Background/8.png" id="6_e7fu5"]
+
+[sub_resource type="Animation" id="Animation_78iij"]
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("awan:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.15708]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("awan:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(100, 324)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("awann:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1723, 359)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("awann:skew")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.26529]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("awan2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1194, 256)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("awan2:skew")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.179769]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("shine:hframes")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("shine:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.4, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [19.5651, 19.5651]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Control2/TouchScreenButton:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.658147, 0.658147)]
+}
+
+[sub_resource type="Animation" id="Animation_plkna"]
+resource_name = "kanan kiri"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("awan:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.5, 0.9, 1.3, 2, 2.8, 3.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.308923, 0.204204, -0.282743, 0.0820305, -0.113446, -0.15708, 0.15708, -0.0855211, 0.15708]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("awan:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.9, 1.1, 1.3, 1.6, 2, 2.5, 2.9, 3.3, 3.6, 3.9, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-170, 428), Vector2(-35, 376), Vector2(100, 324), Vector2(172, 480), Vector2(170, 324), Vector2(200, 324), Vector2(322, 426), Vector2(546, 482), Vector2(600, 324), Vector2(700, 395), Vector2(800, 324), Vector2(900, 324), Vector2(1000, 324), Vector2(1100, 324), Vector2(1847, 344)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("awann:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1.1, 1.4, 1.7, 2, 2.3, 2.5, 2.8, 3.2, 3.6, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1723, 359), Vector2(1613, 399), Vector2(1513, 399), Vector2(1474, 334), Vector2(1349, 421), Vector2(1216, 362), Vector2(1100, 362), Vector2(1000, 362), Vector2(813, 317), Vector2(713, 354), Vector2(613, 354), Vector2(513, 354), Vector2(409, 430), Vector2(335, 325), Vector2(262, 333)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("awann:skew")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5, 1, 1.5, 1.7, 2, 2.3, 2.6, 2.9, 3.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.00872665, 0.26529, -0.232129, 0.125664, -0.127409, 0.26529, -0.113446, 0.0872665, -0.174533]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("awan2:hframes")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("awan2:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2.1, 2.5, 2.9, 3.4, 3.7, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1389, 245), Vector2(1194, 256), Vector2(861, 269), Vector2(546, 220), Vector2(225, 372), Vector2(294, 259), Vector2(60, 248), Vector2(245, 269), Vector2(-300, 264), Vector2(-593, 228)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("awan2:skew")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1.1, 2.4, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.0670611, -0.179769, -0.160984]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("shine:hframes")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.312962),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("shine:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.2, 0.5, 1.1, 1.7, 2.2, 2.8, 3.5, 3.9, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.872665, 1.0472, 1.22173, 1.39626, 1.5708, 1.74533, 2.0944, 2.44346, 3.14159]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Control2/TouchScreenButton:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1, 2, 2.9, 3.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.658, 0.719), Vector2(1.054, 1), Vector2(0.658, 0.719), Vector2(1.054, 1), Vector2(0.658, 0.719)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_56byu"]
+_data = {
+"RESET": SubResource("Animation_78iij"),
+"kanan kiri": SubResource("Animation_plkna")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qpn36"]
+custom_solver_bias = 0.14
+size = Vector2(500, 200)
+
+[node name="start" type="Node2D"]
+script = ExtResource("1_deljy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_56byu")
+}
+autoplay = "kanan kiri"
+
+[node name="bg" type="Sprite2D" parent="."]
+position = Vector2(957, 540)
+scale = Vector2(1.49583, 1.49583)
+texture = ExtResource("1_yiakb")
+
+[node name="awan" type="Sprite2D" parent="."]
+position = Vector2(100, 324)
+skew = -0.15708
+texture = ExtResource("2_l5dsm")
+
+[node name="awan2" type="Sprite2D" parent="."]
+position = Vector2(1194, 256)
+skew = -0.179769
+texture = ExtResource("2_l5dsm")
+
+[node name="awann" type="Sprite2D" parent="."]
+position = Vector2(1723, 359)
+skew = 0.26529
+texture = ExtResource("3_kdu3a")
+
+[node name="shine" type="Sprite2D" parent="."]
+position = Vector2(961, 528)
+rotation = 19.5651
+scale = Vector2(0.4785, 0.483333)
+texture = ExtResource("5_neu72")
+
+[node name="teks" type="Sprite2D" parent="."]
+position = Vector2(968, 540)
+scale = Vector2(0.480333, 0.480333)
+texture = ExtResource("6_e7fu5")
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 686.0
+offset_top = 746.0
+offset_right = 1119.0
+offset_bottom = 863.0
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Control2"]
+position = Vector2(89, -57)
+scale = Vector2(0.658147, 0.658147)
+texture_normal = ExtResource("4_vsewb")
+texture_pressed = ExtResource("5_i46b3")
+shape = SubResource("RectangleShape2D_qpn36")
+shape_visible = false
+
+[connection signal="pressed" from="Control2/TouchScreenButton" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="released" from="Control2/TouchScreenButton" to="." method="_on_touch_screen_button_released"]

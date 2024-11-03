@@ -1,0 +1,135 @@
+[gd_scene load_steps=11 format=3 uid="uid://bcgkwjj2bkxj0"]
+
+[ext_resource type="Script" path="res://victory.gd" id="1_6egis"]
+[ext_resource type="Texture2D" uid="uid://ba1b1xci7y061" path="res://asset/background/box.png" id="2_858n6"]
+[ext_resource type="Texture2D" uid="uid://dwnufo1qgv470" path="res://asset/background/11.png" id="3_55svw"]
+[ext_resource type="Texture2D" uid="uid://djaxl30deqjf3" path="res://asset/background/win lose/12.png" id="4_v2vtq"]
+[ext_resource type="Texture2D" uid="uid://b1y6kiobrcwa7" path="res://asset/botton/6.png" id="5_sayli"]
+[ext_resource type="Texture2D" uid="uid://cq8c3xrm4rvyj" path="res://asset/botton/hover/6.png" id="6_leku2"]
+[ext_resource type="Texture2D" uid="uid://c2rs7bwwscwhf" path="res://asset/botton/7.png" id="7_r5n37"]
+
+[sub_resource type="Animation" id="Animation_3paeb"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("springkel:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.1, 0.105), Vector2(1.8002, 1.89497)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("cat:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.1, 0.099), Vector2(0.480444, 0.476444)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control/home:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.1, 0.1), Vector2(0.34968, 0.322684)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Control2/retry:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.1, 0.1), Vector2(0.35, 0.344)]
+}
+
+[sub_resource type="Animation" id="Animation_d32fx"]
+resource_name = "win"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("springkel:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.4, 0.421), Vector2(1.8002, 1.89497)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8fnsl"]
+_data = {
+"RESET": SubResource("Animation_3paeb"),
+"win": SubResource("Animation_d32fx")
+}
+
+[node name="victory" type="Node2D"]
+script = ExtResource("1_6egis")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8fnsl")
+}
+autoplay = "RESET"
+
+[node name="box" type="Sprite2D" parent="."]
+position = Vector2(959.111, 534)
+scale = Vector2(0.480444, 0.476444)
+texture = ExtResource("2_858n6")
+
+[node name="springkel" type="Sprite2D" parent="."]
+position = Vector2(964, 426)
+scale = Vector2(0.1, 0.105)
+texture = ExtResource("3_55svw")
+
+[node name="cat" type="Sprite2D" parent="."]
+position = Vector2(960, 525)
+scale = Vector2(0.1, 0.099)
+texture = ExtResource("4_v2vtq")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 772.0
+offset_top = 665.0
+offset_right = 940.0
+offset_bottom = 747.0
+
+[node name="home" type="TouchScreenButton" parent="Control"]
+position = Vector2(-4.99994, -8.99988)
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("5_sayli")
+texture_pressed = ExtResource("6_leku2")
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 992.0
+offset_top = 683.0
+offset_right = 1153.0
+offset_bottom = 742.0
+
+[node name="retry" type="TouchScreenButton" parent="Control2"]
+position = Vector2(-4, -25)
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("7_r5n37")
+texture_pressed = ExtResource("7_r5n37")
+
+[connection signal="released" from="Control/home" to="." method="_on_home_released"]
+[connection signal="released" from="Control2/retry" to="." method="_on_retry_released"]
