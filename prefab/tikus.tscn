@@ -1,0 +1,89 @@
+[gd_scene load_steps=14 format=3 uid="uid://ddoscybbrjw2q"]
+
+[ext_resource type="Script" path="res://prefab/tikus.gd" id="1_6d23l"]
+[ext_resource type="Texture2D" uid="uid://cfaxo6u6igflo" path="res://asset/tikus_idle.png" id="1_ixb7t"]
+[ext_resource type="Texture2D" uid="uid://b5f5lra7vpgr2" path="res://asset/tikus_walk.png" id="2_07jas"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vkj2m"]
+size = Vector2(23, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qedjk"]
+atlas = ExtResource("1_ixb7t")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_doyge"]
+atlas = ExtResource("1_ixb7t")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61ion"]
+atlas = ExtResource("1_ixb7t")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nqcw"]
+atlas = ExtResource("1_ixb7t")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5n34h"]
+atlas = ExtResource("2_07jas")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_loeg3"]
+atlas = ExtResource("2_07jas")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8v6x"]
+atlas = ExtResource("2_07jas")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4h7e"]
+atlas = ExtResource("2_07jas")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u55kw"]
+animations = [{
+"frames": [{
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_qedjk")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_doyge")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_61ion")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_2nqcw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_5n34h")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_loeg3")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_b8v6x")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_m4h7e")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[node name="Tikus" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_6d23l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 16)
+shape = SubResource("RectangleShape2D_vkj2m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_u55kw")
+autoplay = "default"

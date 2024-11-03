@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=4 uid="uid://dtmkoexv76cq1"]
+[gd_scene load_steps=7 format=4 uid="uid://dtmkoexv76cq1"]
 
-[ext_resource type="Texture2D" uid="uid://d3ckw77ob1lcj" path="res://assets/tileset.png" id="1_fi0ui"]
-[ext_resource type="PackedScene" uid="uid://cqxjv1pkx6fgv" path="res://scenes/prefab/papan.tscn" id="2_2thio"]
+[ext_resource type="Texture2D" uid="uid://d3ckw77ob1lcj" path="res://asset/tileset.png" id="1_fi0ui"]
+[ext_resource type="PackedScene" uid="uid://cqxjv1pkx6fgv" path="res://prefab/papan.tscn" id="2_2thio"]
+[ext_resource type="PackedScene" uid="uid://ddoscybbrjw2q" path="res://prefab/tikus.tscn" id="3_w02bm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2vx07"]
 texture = ExtResource("1_fi0ui")
@@ -39,4 +40,8 @@ scale = Vector2(1.52, 10)
 shape = SubResource("RectangleShape2D_5s4mm")
 
 [node name="Papan" parent="." instance=ExtResource("2_2thio")]
-position = Vector2(127, 438)
+position = Vector2(149, 428)
+script = null
+
+[node name="Tikus" parent="." instance=ExtResource("3_w02bm")]
+position = Vector2(54, 606)
