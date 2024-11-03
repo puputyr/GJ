@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqxjv1pkx6fgv"]
+
+[ext_resource type="Texture2D" uid="uid://cee4b7jd2jipo" path="res://asset/papan.png" id="1_5tfy7"]
+[ext_resource type="Script" path="res://prefab/papan.gd" id="1_mxvxp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ibel"]
+
+[node name="Papan" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_mxvxp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(4.8, 1.64)
+shape = SubResource("RectangleShape2D_6ibel")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5tfy7")
